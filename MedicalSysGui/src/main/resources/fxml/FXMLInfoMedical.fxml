@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.111" fx:controller="com.jamr.medicalsysgui.Controller.InfoMedicalController">
+   <children>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="225.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@web-development-glyph-04-512.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="176.0" layoutY="306.0" text="\@Ariel Mezquita  - Itla 2017">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label layoutX="214.0" layoutY="247.0" text="Medical SYS">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

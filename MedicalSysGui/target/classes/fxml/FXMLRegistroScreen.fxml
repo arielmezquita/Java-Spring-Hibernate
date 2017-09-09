@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.jamr.medicalsysgui.Controller.RegistroScreenController">
+   <children>
+     <BorderPane fx:id="mainLayout" prefHeight="400.0" prefWidth="600.0">
+      <top>
+       <VBox>
+           <children>
+       <MenuBar prefHeight="25.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+                              <MenuItem mnemonicParsing="false" text="Inicio" />
+                              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Mantenimiento">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#cargarRegistroPaciente" text="Registro Pacientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#cargarRegistroMedico" text="Registro Medicos" />
+                  <MenuItem mnemonicParsing="false" onAction="#cargarRegistroProcedimiento" text="Registro Procedimientos" />
+                  <MenuItem mnemonicParsing="false" onAction="#cargarRegistroCita" text="Registro Citas" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Informacion">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#cargarInfo" text="About" />
+            </items>
+          </Menu>
+        </menus>
+         <effect>
+            <Glow>
+               <input>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </input>
+            </Glow>
+         </effect>
+      </MenuBar>
+       </children>
+     </VBox>
+    </top>
+         <center>
+            <ImageView fitHeight="216.0" fitWidth="251.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+               <image>
+                  <Image url="@medicalIT.png" />
+               </image>
+            </ImageView>
+         </center>
+         <bottom>
+            <Label prefHeight="53.0" prefWidth="558.0" text="MEDICAL SYS ----------------------" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+         </bottom>
+    </BorderPane>
+   </children>
+</AnchorPane>

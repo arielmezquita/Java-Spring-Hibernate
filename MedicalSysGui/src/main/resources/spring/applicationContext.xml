@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    
+    <import resource="persistenceContext.xml"/>
+
+    
+    <!--REPOSITORY BEANS-->    
+    <bean id="medicoRepository" 
+      class="com.jamr.medicalsysbusiness.repository.impl.MedicoRepositoryImpl" >
+        <constructor-arg index="0" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="pacienteRepository" 
+      class="com.jamr.medicalsysbusiness.repository.impl.PacienteRepositoryImpl" >
+        <constructor-arg index="0" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="procedimientoRepository" 
+      class="com.jamr.medicalsysbusiness.repository.impl.ProcedimientoRepositoryImpl" >
+        <constructor-arg index="0" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="citaRepository" 
+          class="com.jamr.medicalsysbusiness.repository.impl.CitaRepositoryImpl">
+        <constructor-arg index="0" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="especialidadRepository" 
+          class="com.jamr.medicalsysbusiness.repository.impl.EspecialidadRepositoryImpl">
+        <constructor-arg index="0" ref="sessionFactory"/>
+    </bean>
+
+    <bean id="horarioRepository" 
+          class="com.jamr.medicalsysbusiness.repository.impl.HorarioRepositoryImpl">
+        <constructor-arg index="0" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="diagnosticoRepository" 
+          class="com.jamr.medicalsysbusiness.repository.impl.DiagnosticoRepositoryImpl">
+        <constructor-arg index="0" ref="sessionFactory"/>
+    </bean>
+    
+    <bean id="expedienteRepository" 
+          class="com.jamr.medicalsysbusiness.repository.impl.ExpedienteRepositoryImpl">
+        <constructor-arg index="0" ref="sessionFactory"/>
+    </bean>
+
+
+
+    <!--SERVICES BEANS-->
+    <bean id="medicoService" 
+          class="com.jamr.medicalsysbusiness.services.impl.MedicoServiceImpl">
+         <constructor-arg index="0" ref="medicoRepository"/>   
+    </bean>
+    
+    <bean id="pacienteService" 
+          class="com.jamr.medicalsysbusiness.services.impl.PacienteServiceImpl">
+         <constructor-arg index="0" ref="pacienteRepository"/>   
+    </bean>
+
+    <bean id="procedimientoService" 
+          class="com.jamr.medicalsysbusiness.services.impl.ProcedimientoServiceImpl">
+         <constructor-arg index="0" ref="procedimientoRepository"/>   
+    </bean>    
+   
+    <bean id="citaService" 
+          class="com.jamr.medicalsysbusiness.services.impl.CitaServiceImpl">
+         <constructor-arg index="0" ref="citaRepository"/>   
+    </bean>
+
+    <bean id="especialidadService" 
+          class="com.jamr.medicalsysbusiness.services.impl.EspecialidadServiceImpl">
+         <constructor-arg index="0" ref="especialidadRepository"/>   
+    </bean>
+    
+    <bean id="horarioService" 
+          class="com.jamr.medicalsysbusiness.services.impl.HorarioServiceImpl">
+         <constructor-arg index="0" ref="horarioRepository"/>   
+    </bean>
+
+    <bean id="diagnosticoService" 
+          class="com.jamr.medicalsysbusiness.services.impl.DiagnosticoServiceImpl">
+         <constructor-arg index="0" ref="diagnosticoRepository"/>   
+    </bean>
+
+    <bean id="expedienteService" 
+          class="com.jamr.medicalsysbusiness.services.impl.ExpedienteServiceImpl">
+         <constructor-arg index="0" ref="expedienteRepository"/>   
+    </bean>
+    
+</beans>
